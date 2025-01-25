@@ -1,51 +1,127 @@
-export default function detailsPage() {
-  return (
-    <div className="max-w-6xl mx-auto p-8 font-sans">
-      <header className="flex justify-between items-center font-bold text-lg">
-        <span>KRIYA 2025</span>
-        <button className="bg-black text-white py-2 px-6">REGISTER</button>
-      </header>
+"use client";
+import React from 'react';
 
-      <div className="mt-10 flex flex-col lg:flex-row gap-10">
-        {/* Left Section */}
-        <div className="flex-1">
-          <div className="flex items-baseline space-x-4">
-            <h1 className="text-7xl font-bold">25</h1>
-            <div>
-              <span className="block font-bold text-lg">FEBRUARY</span>
-              <span className="block font-bold text-gray-500">(2025)</span>
+export default function NextechEvent() {
+  return (
+    <div className="flex h-screen">
+
+            {/* Sidebar */}
+            <aside className="w-1/4 bg-black text-white p-6 hidden md:block">
+            <h1 className="text-2xl font-bold mb-8">Yutira 2025</h1>
+            <button className="w-full text-black py-2 rounded-md mb-6">
+              Register/Login
+            </button>
+  
+            <nav>
+              <ul className="space-y-4">
+                <li className="font-bold">Home</li>
+                <li>Events</li>
+                <li>Workshops</li>
+                <li>Paper Presentations</li>
+              </ul>
+            </nav>
+  
+            <div className="mt-8">
+              <h3 className="font-bold text-lg">Workshops</h3>
+              <p className="text-gray-400">BIM Workshop</p>
+            </div>
+  
+            <div className="mt-4">
+              <h3 className="font-bold text-lg">Events</h3>
+              <p className="text-gray-400">Build Bound Challenge - Elevate Expectations</p>
+              <p className="text-gray-400">Cipher Craft: Unlocking Is 456:2000</p>
+            </div>
+  
+            <div className="mt-4">
+              <h3 className="font-bold text-lg">Paper Presentations</h3>
+              <p className="text-gray-400">Paper Presentation</p>
+            </div>
+          </aside>
+    <div className="w-full p-8 bg-gradient-to-r from-[#E3FEFE] to-[#ffffff] shadow-md text-black">
+      
+      <div className="flex flex-col lg:flex-row justify-between items-start">
+        <div>
+          <h1 className="text-sm font-bold">KRIYA 2025</h1>
+          <h2 className="text-lg font-bold mt-2">(01) GOLD EVENT ' </h2>
+          <h3 className="text-5xl font-bold mt-1">Nextech</h3>
+        </div>
+
+        <div className="text-3xl font-bold lg:text-right sm:text-left flex flex-col items-end lg:mt-6 sm:mt-6">
+          <div className="flex items-center sm:mr-8=10 xl:text-right sm:text-left sm:mt-0 mt-2 mr-10">
+            <span className="text-6xl sm:text-left font-bold mr-6">24</span>
+            <div className="sm:text-left leading-tight sm:mr-35">
+              <p className="text-xl sm: font-bold">FEBRUARY</p>
+              <p className="text-lg font-bold">(2025)</p>
             </div>
           </div>
-          <p className="font-bold text-lg mt-2">(01) GOLD EVENT</p>
-          <h2 className="text-5xl font-bold mt-4">Nextech</h2>
-          <p className="text-xl text-gray-600 mt-2">Global Clash of Techno Talents</p>
-          <button className="mt-6 bg-black text-white py-2 px-6">LEARN MORE</button>
-        </div>
+          <div className="mt-1 lg:flex  items-center text-sm font-bold">
+          <p className="sm:mt-2 mt-2 sm:mt-0 sm:text-left block">PROGRAMMING LAB ( E - BLOCK )</p>
+<p className="  mt-2 sm:ml-3 sm:mr-3 block">2 - 4 MEMBERS</p>
+<p className=" sm:mt-2 mt-2 sm:mt-0 block">9:30am - 10:30pm</p>
 
-        {/* Right Section */}
-        <div className="flex-1 text-right">
-          <img src="/vr-event.jpg" alt="VR Event" className="w-full rounded-lg shadow-lg" />
-          <div className="mt-6 text-left">
-            <h3 className="text-xl font-bold">LIVE* FREE*</h3>
-            <p className="text-gray-600 mt-1">🕘 9:30 AM - 10:30 PM</p>
-            <p className="mt-2 font-bold">
-              Programming Lab <br />
-              <span className="text-gray-500">(E - Block)</span>
-            </p>
-            <p className="mt-2 font-bold">2 - 4 Members</p>
           </div>
-
-          <div className="mt-6 text-left">
-            <h3 className="text-xl font-bold">Convenors</h3>
-            <p className="mt-2">Arul Kumara BR <br /> 99999 99999</p>
-            <p className="mt-2">Arul Kumara BR <br /> 99999 99999</p>
           </div>
+    
+      </div>
 
-          <p className="text-gray-400 text-sm mt-4">
-            * Event availability is subject to change
+      <p className="mt-1 text-gray-700 border-t pt-4">
+        "NexTech invites students to a one-day hackathon focusing on Smart Campus Solutions. Participants engage in challenges spanning Smart Parking, Enhanced Campus Resources, Sustainable Operations, and more."
+        NexTech invites students to a one-day hackathon focusing on Smart Campus Solutions. Participants engage in challenges spanning Smart Parking, Enhanced Campus Resources, Sustainable Operations, and more.
+      </p>
+
+      {/* Flex container for Rounds and Convenors */}
+      <div className="mt-8 flex flex-col lg:flex-row gap-12">
+        {/* Rounds Section */}
+        <div className="w-full lg:w-4/5">
+          <div className="flex items-center mb-6">
+            <h4 className="text-6xl font-bold mr-4">1</h4>
+            <div>
+              <h5 className="text-lg font-bold">ROUND 1</h5>
+              <p className="italic">("Brain Storm Blitz")</p>
+            </div>
+          </div>
+          <p className="mt-1 text-justify text-gray-700">
+            NexTech Hackathon starts with a 1.5-hour ideation sprint, generating innovative solutions Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It waNexTech invites students to a one-day hackathon focusing on Smart Campus Solutions. Participants engage in challenges spanning Smart Parking, Enhanced Campus Resources, Sustainable Operations, and more.NexTech invites students to a one-day hackathon focusing on Smart Campus Solutions. Participants engage in challenges spanning Smart Parking, Enhanced Campus Resources, Sustainable Operations, and more.NexTech invites students to a one-day hackathon focusing on Smart Campus Solutions. Participants engage in challenges spanning Smart Parking, Enhanced Campus Resources, Sustainable Operations, and more.NexTech invites students to a one-day hackathon focusing on Smart Campus Solutions. Participants engage in challenges spanning Smart Parking, Enhanced Campus Resources, Sustainable Operations, and more.
+          </p>
+
+          <div className="flex items-center mt-8">
+            <h4 className="text-6xl font-bold mr-4">2</h4>
+            <div>
+              <h5 className="text-lg font-bold">ROUND 2</h5>
+              <p className="italic">("Brain Storm Blitz")</p>
+            </div>
+          </div>
+          <p className="mt-2 text-justify text-gray-700">
+            During the final round, participants will present their well-prepared prototypes Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the induLorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply dummy text of the printing and typesetting iNexTech invites students to a one-day hackathon focusing on Smart Campus Solutions. Participants engage in challenges spanning Smart Parking, Enhanced Campus Resources, Sustainable Operations, and more.NexTech invites students to a one-day hackathon focusing on Smart Campus Solutions. Participants engage in challenges spanning Smart Parking, Enhanced Campus Resources, Sustainable Operations, and more.
           </p>
         </div>
+
+        {/* Convenors Section (takes 20% width on larger screens) */}
+        <div className="w-full lg:w-1/5 xl:border-l sm:border:0 xl:pl-8 sm:pl-1 xl:mt-8 sm:mt-[-2rem]">
+          <p className="font-bold sm:text-left ">■ Note ■</p>
+          <p className="text-gray-700  text-m">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's stanNexTech invites students to a one-day hackathon focusing on Smart Campus Solutions. Participants engage in challenges spanning Smart Parking, En
+          </p>
+          <div className="sm:text-left mt-4">
+            <h6 className="font-bold">■ Convenors</h6>
+            <p>Arul Kumara BR</p>
+            <p>99999 99999</p>
+            <p>Arul Kumara BR</p>
+            <p>99999 99999</p>
+          </div>
+        </div>
       </div>
+      <div className="flex mt-2 ml-[-0.2rem]">
+        <button className="bg-black text-white py-1 px-3 text-sm rounded-md">
+          REGISTER
+        </button>
+      </div>
+
+    
+      
+    </div>
     </div>
   );
 }
+
+
