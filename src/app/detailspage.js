@@ -121,15 +121,14 @@ export default function NextechEvent({ref}) {
       {showVideo && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70">
           <div className="relative w-full max-w-2xl">
-            <iframe
-              className="w-full h-[400px] rounded-lg"
-              src="https://www.youtube.com/watch?v=hq3yfQnllfQ"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-            <button
+          <iframe
+    className="w-full h-[400px] rounded-lg"
+    src="https://www.youtube.com/embed/hq3yfQnllfQ"
+    title="YouTube video player"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  ></iframe>            <button
               className="absolute top-2 right-2 bg-black text-white px-2 py-0.5 rounded-full"
               onClick={() => setShowVideo(false)}
             >
