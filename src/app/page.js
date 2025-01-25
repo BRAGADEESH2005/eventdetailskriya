@@ -1,8 +1,14 @@
 "use client";
 import NextechEvent from "./detailspage.js";
-import { useState } from "react";
+import { useState,useRef,useEffect } from "react";
 export default function Home() {
   const [showDetails, setShowDetails] = useState(false);
+  const geeksForGeeksRef = useRef(null);
+  useEffect(() => {
+    if (showDetails && geeksForGeeksRef.current) {
+      geeksForGeeksRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  })
   const toggleDetails = () => {
     setShowDetails((prev) => !prev);
   };
@@ -44,11 +50,19 @@ export default function Home() {
         </aside>
 
         {/* Main Content */}
-        <main className="flex-1  p-6 md:p-12 h-full min-h-screen flex flex-col">
-          <header className="flex justify-between items-center mb-10">
-            <h2 className="text-2xl font-bold">KRIYA 2025</h2>
-            <button className="bg-black text-white py-2 px-6 rounded-md">REGISTER</button>
-          </header>
+        <main className="flex-1  p-4 md:p-10 h-full min-h-screen flex flex-col">
+        <header className="flex justify-between items-center mb-4">
+  <h2 className="text-2xl font-bold">KRIYA 2025</h2>
+</header>
+{/* Early Bird Scrolling Section */}
+<div className="bg-black py-1 overflow-hidden w-full mb-2">
+  <div className="early-bird-text text-sm">
+    EARLY BIRD REGISTRATIONS OPEN NOW! REGISTER SOON!
+  </div>
+</div>
+
+
+
 
           <div className="flex flex-col  lg:flex-row gap-16 flex-grow">
             {/* Left Section */}
@@ -60,22 +74,25 @@ export default function Home() {
                   className="w-full lg:w-3/4 rounded-lg shadow-lg"
                 />
               </div>
-              <div className="mt-6 flex items-center">
-                <h1 className="text-7xl font-bold">25</h1>
-                <div className="ml-4">
-                  <p className="text-lg font-bold">FEBRUARY</p>
-                  <p className="text-lg font-bold">(2025)</p>
-                </div>
-              </div>
-              <p className="mt-2 text-lg font-bold">(01) GOLD EVENT</p>
-              <h2 className="text-7xl font-bold mt-2">Nextech</h2>
-              <p className="text-3xl text-gray-600 mt-2">Global Clash of Techno Talents</p>
+              <div className="mt-2 flex items-center">  {/* Reduced from mt-4 */}
+  <h1 className="text-5xl font-bold">25</h1>
+  <div className="ml-2">
+    <p className="text-sm font-bold">FEBRUARY</p>
+    <p className="text-sm font-bold">(2025)</p>
+  </div>
+</div>
+<p className="mt-1 text-lg font-bold">(01) GOLD EVENT</p>  {/* Reduced from mt-2 */}
+<h2 className="text-5xl font-bold mt-1">Nextech</h2>  {/* Reduced from mt-2 */}
+
+              <p className="text-2xl text-gray-600 mt-2">Global Clash of Techno Talents</p>
               <button
-                className="mt-6 bg-black text-white py-2 px-6 rounded-md"
+                className="mt-4 bg-black text-white py-2 px-6 rounded-md"
                 onClick={toggleDetails}
               >
                 {showDetails ? "LEARN LESS" : "LEARN MORE"}
               </button>
+            <button className="bg-black text-white ml-2 py-2 px-6 rounded-md">REGISTER</button>
+
             </div>
 
             {/* Right Section */}
@@ -102,7 +119,7 @@ export default function Home() {
         </main>
         </div>
        {/* Render NextechEvent Component */}
-          {showDetails && <NextechEvent id="next1"/>}
+          {showDetails && <NextechEvent  ref={geeksForGeeksRef} id="next1"/>}
     </>
   );
 }
